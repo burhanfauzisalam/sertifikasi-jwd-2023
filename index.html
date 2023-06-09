@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ini adalah baris untuk mengubah judul website -->
+    <title>Aplikasi Penghitung Luas</title>
+
+    <!-- ini adalah baris untuk menghubungkan file css Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- ini adalah baris untuk menghubungkan file js Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ini adalah baris untuk menghubungkan file JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ini adalah baris untuk mengubah favicon web -->
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon-32x32.png"
+      type="image/png"
+    />
+
+    <!-- ini adalah baris untuk menghubungkan file css custom -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tag header untuk membuat bagian header atau judul -->
+      <header>
+        <h1>Aplikasi Penghitung Luas</h1>
+        <h4>Bangun Datar</h4>
+      </header>
+
+      <!--tag horizontal line untuk membuat garis pemisah secara horizontal-->
+      <hr />
+
+      <!-- bagian untuk memilih bangun datar yang akan dihitung -->
+      <div id="perhitungan">
+        <h4 id="header-perhitungan">
+          Silahkan pilih bangun datar yang akan dihitung
+        </h4>
+        <div class="row" id="gambar_bangun">
+          <div id="segitiga" class="col-lg-4 col-md-4 col-sm-12">
+            <h5>Segitiga</h5>
+            <img
+              src="./assets/segitiga.jpg"
+              alt="Bangun Datar Segitiga"
+              class="img-bangun"
+            /><br />
+            <button id="hit-segitiga" class="btn btn-info">Hitung</button>
+          </div>
+          <div id="persegi" class="col-lg-4 col-md-4 col-sm-12">
+            <h5>Persegi</h5>
+            <img
+              src="./assets/persegi.png"
+              alt="Bangun Datar Persegi"
+              class="img-bangun"
+            /><br />
+            <button id="hit-persegi" class="btn btn-info">Hitung</button>
+          </div>
+          <div id="lingkaran" class="col-lg-4 col-md-4 col-sm-12">
+            <h5>Lingkaran</h5>
+            <img
+              src="./assets/lingkaran.png"
+              alt="Bangun Datar Lingkaran"
+              class="img-bangun"
+            /><br />
+            <button id="hit-lingkaran" class="btn btn-info">Hitung</button>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <!-- bagian rumus -->
+      <div id="rumus">
+        <button id="kembali" class="btn btn-warning">Kembali</button>
+        <h4 id="header-rumus">Rumus Luas</h4>
+        <div id="input-rumus"></div>
+        <div id="hasil"></div>
+      </div>
+
+      <div id="riwayat">
+        <h4 id="header-riwayat">Riwayat Perhitungan</h4>
+        <h5>Total perhitungan yang dilakukan</h5>
+        <h1 id="total-hitung">Loading...</h1>
+        <div class="row">
+          <div class="col-4">
+            <h5>Segitiga</h5>
+            <h1 id="riwayat-segitiga">Loading...</h1>
+            <h1 id="persen-riwayat-segitiga">--%</h1>
+          </div>
+          <div class="col-4">
+            <h5>Persegi</h5>
+            <h1 id="riwayat-persegi">Loading...</h1>
+            <h1 id="persen-riwayat-persegi">--%</h1>
+          </div>
+          <div class="col-4">
+            <h5>Lingkaran</h5>
+            <h1 id="riwayat-lingkaran">Loading...</h1>
+            <h1 id="persen-riwayat-lingkaran">--%</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="tb">
+        <div>
+          <table class="table" id="tb-segitiga">
+            <thead>
+              <tr>
+                <th scope="col">Waktu</th>
+                <th scope="col">Object</th>
+                <th scope="col">Data</th>
+                <th scope="col">Hasil</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div>
+          <table class="table" id="tb-persegi">
+            <thead>
+              <tr>
+                <th scope="col">Waktu</th>
+                <th scope="col">Object</th>
+                <th scope="col">Data</th>
+                <th scope="col">Hasil</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div>
+          <table class="table" id="tb-lingkaran">
+            <thead>
+              <tr>
+                <th scope="col">Waktu</th>
+                <th scope="col">Object</th>
+                <th scope="col">Data</th>
+                <th scope="col">Hasil</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- baris untuk menghubungkan ke file js secara eksternal -->
+    <script src="script.js"></script>
+  </body>
+</html>

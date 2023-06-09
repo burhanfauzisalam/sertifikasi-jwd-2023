@@ -1,0 +1,30 @@
+header,
+#header-riwayat {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#perhitungan,
+#rumus,
+#riwayat {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#header-perhitungan {
+  margin-bottom: 20px;
+}
+
+.img-bangun {
+  height: 100px;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+input {
+  margin: 5px;
+}
